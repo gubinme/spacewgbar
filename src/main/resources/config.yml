@@ -1,0 +1,17 @@
+# SpaceWGBar configuration
+# https://docs.papermc.io/adventure/minimessage/format/
+
+settings:
+  # How often (in server ticks) the ActionBar is refreshed while a player stays inside a region.
+  # Action bars expire on the client, so keep this value reasonably low (20 ticks = 1 second).
+  update-interval-ticks: 20
+
+# Map of WorldGuard region IDs to ActionBar messages.
+# When a player is inside multiple configured regions, the entry with the highest priority wins.
+regions:
+  spawn:
+    message: "<green>Welcome to spawn, <white>%player_name%<green>!"
+    priority: 10
+  shop:
+    message: "<gold>Shop area — browse our offers!"
+    priority: 5

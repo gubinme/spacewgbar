@@ -1,0 +1,29 @@
+name: SpaceWGBar
+version: '${project.version}'
+main: top.gubinmc.spacewgbar.SpaceWGBar
+api-version: '1.21'
+prefix: SpaceWGBar
+authors: [ gubinmc, Grodmir ]
+website: https://discord.gg/v2hsQsU8yz
+description: Persistent ActionBar messages for configured WorldGuard regions.
+
+softdepend:
+  - WorldGuard
+  - PlaceholderAPI
+
+commands:
+  spacewgbar:
+    description: SpaceWGBar administration commands.
+    aliases: [ swgb, wgbar ]
+    usage: /<command> reload
+    permission: spacewgbar.admin
+
+permissions:
+  spacewgbar.admin:
+    description: Grants access to all SpaceWGBar commands.
+    default: op
+    children:
+      spacewgbar.reload: true
+  spacewgbar.reload:
+    description: Allows reloading SpaceWGBar configuration.
+    default: op
